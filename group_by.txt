@@ -15,4 +15,8 @@ GROUP BY `exam_id`;
 
 
 4. Contare gli appelli d'esame del mese di luglio raggruppati per giorno
-≈
+
+SELECT COUNT(*) AS `numero_appelli`, DAY(`date`) AS `giorno`
+FROM `exams`
+WHERE MONTH(`date`) = 7
+GROUP BY giorno
